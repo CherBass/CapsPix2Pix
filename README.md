@@ -21,7 +21,28 @@ https://doi.org/10.5281/zenodo.2559237
 
 An additional prepared dataset has been complied, and can be found in:
 
-This data was used to train u-net, and to train capspix2pix. Download, and place in the same folder as the code to run experiments.
+This data was used to train u-net, and to train capspix2pix. Download, and place in the same folder as the code to run experiments. Place all .npy in a folder called "npy_data".
+
+*List of prepared data*
+
+Training capspix2pix:
+* crops256.zip - folder containing 256x256 crops from the original dataset for training capspix2pix. Images are in the "train/original" folder, and labels are in the "train/mask" folder.
+* syn256_x_data_val.npy	+ syn256_y_data_val.npy	+ syn256_y_points_data_val.npy (images + labels + centrelines) - validation synthetic dataset, used while training capspix2pix for plotting
+
+Training u-net:
+* capspix2pix_AR_data_train.npy	+ capspix2pix_AR_mask_train.npy	(images + labels) - data generated from a capspix2pix model from real labels
+* capspix2pix_SSM_data_train.npy + capspix2pix_AR_mask_train.npy	(images + labels) - data generated from a capspix2pix model from synthetic labels
+* PBAM_SSM_data_train.npy	+ PBAM_SSM_mask_train.npy	(images + labels) - data generated from PBAM (Physics-based model) for training u-net
+* pix2pix_AR_data_train.npy + pix2pix_AR_mask_train.npy	(images + labels) - data generated from a pix2pix model from real labels for training u-net
+* pix2pix_SSM_data_train.npy + pix2pix_SSM_mask_train.npy (images + labels) - data generated from a pix2pix model from synthetic labels for training u-net
+* real_data_data_train.npy + real_data_mask_train.npy	(images + labels) - augmented real dataset for training u-net
+
+Testing u-net:
+* org64_data_test.npy	+ org64_mask_test.npy	(images + labels) - crops from original test dataset for testing u-net
+
+Interpolation:
+* crops256_inter_data_train.npy	+ crops256_inter_mask_train.npy	(images + labels) - example data for interpolation
+
 
 ## Code Usage
 To start training capspix2pix, first download the datasets as described above and place in the same directory. 
