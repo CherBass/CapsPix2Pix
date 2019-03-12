@@ -42,7 +42,7 @@ def achieve_args():
 
     parse.add_argument('--experiment', type=str, default='capspix2pix_',
             help='Experiment name.')
-    parse.add_argument('--data_load_name', type=str, default='crops256/',
+    parse.add_argument('--data_load_name', type=str, default='crops256',
                        help='data to load (default=crops256)')
     parse.add_argument('--val_load_name', type=str, default='syn256',
                         help='val data to load (default=syn256)')
@@ -50,7 +50,7 @@ def achieve_args():
                         help='image size (default=128)')
     parse.add_argument('--val_image_size', type=int, default=256,
                         help='image size (default=128)')
-    parse.add_argument('--dataloader_read', type=str, default='image', # options: npy, image
+    parse.add_argument('--dataloader_read', type=str, default='npy', # options: npy, image
                         help='whether dataloader reads npy data, or reads from folder on the fly '
                              '>> use image if there are memory constraints')
     parse.add_argument('--noise_source', type=str, default='input', # options: input, broadcast, dropout, broadcast_conv, broadcast_latent
