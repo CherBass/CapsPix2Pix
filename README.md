@@ -1,18 +1,19 @@
 # [Image Synthesis with a Convolutional Capsule Generative Adversarial Network (CapsPix2Pix)](https://openreview.net/forum?id=rJen0zC1lE)
 ## Description
-The paper is about using convolutional capsule layers in a conditional GAN framework to synthesise images from binary segmentation labels.
+The paper is about using convolutional capsule layers in a conditional GAN framework to synthesise images from binary segmentation labels. The code available here is an implementation of the convolutional capsule GAN used in the paper, and also contains the u-net used for testing the quality of the synthesis. See paper for details.
 
 ## Installation
-This code requires Python 3, and a Cuda enabled PC to run GPU experiments.
+This code requires Python 3, and a Cuda enabled PC to run GPU experiments. It is recomended to install a virtual environment for all the required libraries (listed below).
 
-### Requirements 
-<pytorch>
-torchvision
-numpy
-scipy
-cv2
-matplotlib
-json
+### Package Requirements 
+* pytorch
+* torchvision
+* numpy
+* scipy
+* cv2
+* matplotlib
+* json
+* Pillow
 
 ## Datasets
 The original dataset which was used to train the GAN, can be found in:
@@ -21,6 +22,22 @@ https://doi.org/10.5281/zenodo.2559237
 An additional prepared dataset has been complied, and can be found in:
 
 This data was used to train u-net, and to train capspix2pix. Download, and place in the same folder as the code to run experiments.
+
+## Code Usage
+To start training capspix2pix, first download the datasets as described above and place in the same directory. 
+
+The main code used to train capspix2pix is in train_capspix2pix.py.
+
+The main code used to train u-net is in train_u_net.py.
+
+The capspix2pix generator network is in Capsule_Networks.py, see: capspix2pixG class. The discriminator used in the paper is in Networks.py, see: conditionalCapsDcganD class. See other discriminator options in Capsule_Networks.py.
+
+The class AxonDataset.py is used to load and read from datasets.
+
+For visualisation of the generations and the latent space interpolation, see interpolation.py.
+
+The code for convolutional capsules layers is available in Capsules.py, see: convolutionalCapsule and deconvolutionalCapsule classes.
+
 
 ## License
 M.I.T License
