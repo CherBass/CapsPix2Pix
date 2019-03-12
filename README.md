@@ -20,6 +20,7 @@ The original dataset which was used to train the GAN, can be found in:
 https://doi.org/10.5281/zenodo.2559237
 
 An additional prepared dataset has been complied, and can be found in:
+https://doi.org/10.5281/zenodo.2591281
 
 This data was used to train u-net, and to train capspix2pix. Download, and place in the same folder as the code to run experiments. Place all .npy in a folder called "npy_data".
 
