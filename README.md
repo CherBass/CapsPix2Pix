@@ -15,7 +15,7 @@ This code requires Python 3, and a Cuda enabled PC to run GPU experiments. It is
 * json
 * Pillow
 
-### Datasets
+## Datasets
 The original dataset which was used to train the GAN, can be found in:
 https://doi.org/10.5281/zenodo.2559237
 
@@ -23,7 +23,7 @@ An additional prepared dataset has been complied, and can be found in:
 
 This data was used to train u-net, and to train capspix2pix. Download, and place in the same folder as the code to run experiments. Place all .npy in a folder called "npy_data".
 
-## List of prepared data
+### List of prepared data
 
 Training capspix2pix:
 * crops256.zip - folder containing 256x256 crops from the original dataset for training capspix2pix. Images are in the "train/original" folder, and labels are in the "train/mask" folder.
