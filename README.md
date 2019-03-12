@@ -15,7 +15,7 @@ This code requires Python 3, and a Cuda enabled PC to run GPU experiments. It is
 * json
 * Pillow
 
-## Datasets
+### Datasets
 The original dataset which was used to train the GAN, can be found in:
 https://doi.org/10.5281/zenodo.2559237
 
