@@ -44,6 +44,9 @@ Testing u-net:
 Interpolation:
 * crops256_inter_data_train.npy	+ crops256_inter_mask_train.npy	(images + labels) - example data for interpolation
 
+### Physics-Based Imaging Appearance Model (PBAM)
+PBAM synthetic generator code is available in the following repository: 
+https://bitbucket.org/bicv/axon_tracking_with_rl
 
 ## Code Usage
 To start training capspix2pix, first download the datasets as described above and place in the same directory. 
